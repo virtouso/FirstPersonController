@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -8928351471818444634
-    second: C4D Animation Take
+    second: idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: C4D Animation Take
+      name: idle
       takeName: C4D Animation Take
       internalID: 0
       firstFrame: 0
