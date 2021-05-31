@@ -14,7 +14,7 @@ public class CROSSBOW : WeaponBase
         throw new System.NotImplementedException();
     }
 
-    public override void Sprint()
+    public override void Sprint(bool value)
     {
         throw new System.NotImplementedException();
     }

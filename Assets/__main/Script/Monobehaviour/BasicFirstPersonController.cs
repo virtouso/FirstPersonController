@@ -6,6 +6,18 @@ public class BasicFirstPersonController : MonoBehaviour
 {
     public Vector2 MoveSpeed;
 
+    public System.Action<bool> SpeedChanged;
+    private bool _isRunning;
+    public bool IsRunning
+    {
+        set
+        {
+            if (_isRunning != value) SpeedChanged?.Invoke(value);
+            _isRunning = value;
+        }
+
+        get => _isRunning;
+    }
 
     [SerializeField] private float _walkingSpeed = 7.5f;
     [SerializeField] private float _runningSpeed = 11.5f;
@@ -35,9 +47,9 @@ public class BasicFirstPersonController : MonoBehaviour
 
 
 
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = _canMove ? (isRunning ? _runningSpeed : _walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = _canMove ? (isRunning ? _runningSpeed : _walkingSpeed) * Input.GetAxis("Horizontal") : 0;
+        IsRunning = Input.GetKey(KeyCode.LeftShift);
+        float curSpeedX = _canMove ? (IsRunning ? _runningSpeed : _walkingSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = _canMove ? (IsRunning ? _runningSpeed : _walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         MoveSpeed = new Vector2(curSpeedX, curSpeedY);
         float movementDirectionY = _moveDirection.y;
         _moveDirection = (forward * curSpeedX) + (right * curSpeedY);

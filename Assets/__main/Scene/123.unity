@@ -206,6 +206,104 @@ MonoBehaviour:
   _fpsController: {fileID: 101925059}
   _legsAnimator: {fileID: 101925057}
   _handsAnimator: {fileID: 1164972533}
+--- !u!114 &101925062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a40823a825c684faf453224e16e7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: UZI
+  Enabled: 0
+--- !u!114 &101925063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53226211d7bfd04bbfc21547da14a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MP7
+  Enabled: 0
+--- !u!114 &101925064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c48086e0ffd634f9054e94991dbf47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: KNIFE
+  Enabled: 0
+--- !u!114 &101925065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab6436d99b4f684db872318d9a8bbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: CROSSBOW
+  Enabled: 0
+--- !u!114 &101925066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f65812168c0a54f84d5f740c95e557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: CHAINSAW
+  Enabled: 0
+--- !u!114 &101925067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca25728c75ea4824b902fc8bf0aa5ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BAT
+  Enabled: 0
+--- !u!114 &101925068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b20dda2834eb1d48973408b22366e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AK
+  Enabled: 0
 --- !u!1001 &561226281
 PrefabInstance:
   m_ObjectHideFlags: 0
