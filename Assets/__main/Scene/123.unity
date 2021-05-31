@@ -136,7 +136,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101925056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 24071de48112dfd46a2b81a35517ba2c, type: 3}
   m_Controller: {fileID: 9100000, guid: 5f12ec1c3655479409879c222ece2fbc, type: 2}
   m_CullingMode: 0
@@ -152,6 +152,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 24071de48112dfd46a2b81a35517ba2c, type: 3}
   m_PrefabInstance: {fileID: 634285129}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &101925059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101925056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed24be366c07894b9e28d8fac266750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkingSpeed: 7.5
+  _runningSpeed: 11.5
+  _jumpSpeed: 8
+  _gravity: 20
+  _playerCamera: {fileID: 2037423229}
+  _lookSpeed: 2
+  _lookXLimit: 80
+  _characterController: {fileID: 101925060}
 --- !u!143 &101925060
 CharacterController:
   m_ObjectHideFlags: 0
