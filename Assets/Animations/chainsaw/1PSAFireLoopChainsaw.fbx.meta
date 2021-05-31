@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -8928351471818444634
-    second: fire
+    second: firing
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: fire
+      name: firing
       takeName: C4D Animation Take
       internalID: 0
       firstFrame: 0
