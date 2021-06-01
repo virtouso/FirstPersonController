@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: UZI
-  Enabled: 0
+  _animatorLayerIndex: 7
 --- !u!114 &101925063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: MP7
-  Enabled: 0
+  _animatorLayerIndex: 6
 --- !u!114 &101925064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: KNIFE
-  Enabled: 0
+  _animatorLayerIndex: 5
 --- !u!114 &101925065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: CROSSBOW
-  Enabled: 0
+  _animatorLayerIndex: 4
 --- !u!114 &101925066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: CHAINSAW
-  Enabled: 0
+  _animatorLayerIndex: 3
 --- !u!114 &101925067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: BAT
-  Enabled: 0
+  _animatorLayerIndex: 2
 --- !u!114 &101925068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: AK
-  Enabled: 0
+  _animatorLayerIndex: 1
 --- !u!1001 &561226281
 PrefabInstance:
   m_ObjectHideFlags: 0

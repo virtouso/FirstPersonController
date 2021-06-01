@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AnimationController : MonoBehaviour
@@ -38,21 +39,46 @@ public class AnimationController : MonoBehaviour
     {
 
 
-        var success = int.TryParse(Input.inputString, out int result);
+        var success = int.TryParse(Input.inputString.Replace("Alpha", ""), out int result);
         if (success)
         {
-            DisableAllLayers();
-            _handsAnimator.SetLayerWeight(result, 1);
+            if (_currentWeapon != null)
+            {
+
+                _handsAnimator.Play(AnimatorReferences.PutDown, _currentWeapon._animatorLayerIndex);
+            }
+
+            StartCoroutine(ChangeToNewWeapon(result));
+
         }
+    }
+
+
+    IEnumerator ChangeToNewWeapon(int result)
+    {
+        //  yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
+        DisableAllLayers();
+        _handsAnimator.SetLayerWeight(result, 1);
+        _currentWeapon = _weapons.First(x => x._animatorLayerIndex == result);
+        _handsAnimator.Play(AnimatorReferences.Take, _currentWeapon._animatorLayerIndex);
     }
 
 
     private void DisableAllLayers()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i <9; i++)
         {
             _handsAnimator.SetLayerWeight(i, 0);
         }
+    }
+
+    private void HandleCurrentWeapon()
+    {
+        if (_currentWeapon is null) return;
+        _currentWeapon.Reload();
+        _currentWeapon.Fire();
+
     }
 
 
@@ -69,7 +95,9 @@ public class AnimationController : MonoBehaviour
 
     private void Update()
     {
+        ChangeWeapon();
         MoveLegs();
+        HandleCurrentWeapon();
     }
 
 

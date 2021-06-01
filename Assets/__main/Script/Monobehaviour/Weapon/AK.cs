@@ -12,7 +12,7 @@ public class AK : WeaponBase
 
         _counter = 0;
 
-        _animator.Play(AnimatorReferences.Fire);
+        _animator.Play(AnimatorReferences.Fire, _animatorLayerIndex);
         //todo play sound
     }
 
@@ -20,15 +20,15 @@ public class AK : WeaponBase
     {
         if (!Input.GetKeyDown(KeyCode.R)) return;
         if (!_animator.GetCurrentAnimatorStateInfo(_animatorLayerIndex).IsName(AnimatorReferences.Idle)) return;
-        _animator.Play(AnimatorReferences.Reload);
+        _animator.Play(AnimatorReferences.Reload, _animatorLayerIndex);
     }
 
     public override void Sprint(bool value)
     {
         if (value)
-            _animator.Play(AnimatorReferences.SprintIn);
+            _animator.Play(AnimatorReferences.SprintIn, _animatorLayerIndex);
         else
-            _animator.Play(AnimatorReferences.SprintOut);
+            _animator.Play(AnimatorReferences.SprintOut, _animatorLayerIndex);
 
     }
 }

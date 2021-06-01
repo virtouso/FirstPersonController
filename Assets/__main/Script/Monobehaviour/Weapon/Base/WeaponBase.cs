@@ -8,11 +8,11 @@ public abstract class WeaponBase : MonoBehaviour
     [SerializeField] public string Name;
  //   [SerializeField] public bool Enabled;
 
-    [SerializeField] protected readonly float _fireRate;
+    [SerializeField] protected  float _fireRate;
 
 
     protected Animator _animator;
-    protected int _animatorLayerIndex;
+    public int _animatorLayerIndex;
     protected BasicFirstPersonController _fpsController;
 
     protected float _counter;
