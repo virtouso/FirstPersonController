@@ -10,7 +10,8 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private BasicFirstPersonController _fpsController;
     [SerializeField] private Animator _legsAnimator;
     [SerializeField] private Animator _handsAnimator;
-
+    [SerializeField] private Transform _rightHand;
+    [SerializeField] private Transform _leftHand;
 
     private WeaponBase[] _weapons;
     private WeaponBase _currentWeapon;
@@ -56,23 +57,35 @@ public class AnimationController : MonoBehaviour
 
     IEnumerator ChangeToNewWeapon(int result)
     {
-        //  yield return new WaitForSeconds(1);
+
         yield return new WaitForSeconds(1);
         DisableAllLayers();
+        DisableAllWeaponsObject();
         _handsAnimator.SetLayerWeight(result, 1);
         _currentWeapon = _weapons.First(x => x._animatorLayerIndex == result);
+        _currentWeapon.WeaponObject.SetActive(true);
+        _rightHand.localPosition = _currentWeapon.RightHandOffset;
+        _leftHand.localPosition = _currentWeapon.LeftHandOffset;
         _handsAnimator.Play(AnimatorReferences.Take, _currentWeapon._animatorLayerIndex);
     }
 
 
     private void DisableAllLayers()
     {
-        for (int i = 0; i <9; i++)
+        for (int i = 0; i < 9; i++)
         {
             _handsAnimator.SetLayerWeight(i, 0);
         }
     }
 
+    private void DisableAllWeaponsObject()
+    {
+        foreach (var item in _weapons)
+        {
+            if (item.WeaponObject == null) continue;
+            item.WeaponObject.SetActive(false);
+        }
+    }
     private void HandleCurrentWeapon()
     {
         if (_currentWeapon is null) return;

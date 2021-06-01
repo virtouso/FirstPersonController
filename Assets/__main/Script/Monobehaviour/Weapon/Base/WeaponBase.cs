@@ -9,7 +9,9 @@ public abstract class WeaponBase : MonoBehaviour
  //   [SerializeField] public bool Enabled;
 
     [SerializeField] protected  float _fireRate;
-
+    [SerializeField] public GameObject WeaponObject;
+    [SerializeField] public Vector3 RightHandOffset;
+    [SerializeField] public Vector3 LeftHandOffset;
 
     protected Animator _animator;
     public int _animatorLayerIndex;
